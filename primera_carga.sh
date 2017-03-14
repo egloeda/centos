@@ -25,7 +25,7 @@ EOF
 
 yum -y update 
 yum -y install webmin
-yum install perl-IO-Compress.noarch 
+yum -y install perl-IO-Compress.noarch 
 
 
 service webmin start
