@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# https://raw.githubusercontent.com/egloeda/centos/master/primera_carga.sh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/egloeda/centos/master/primera_carga.sh)"
 
 yum -y update
 yum -y install epel-release
