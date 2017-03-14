@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+yum -y update
+yum -y install epel-release
+yum -y install net-tools
+yum -y install wget tmux nano
+
+cd /root
+wget http://www.webmin.com/jcameron-key.asc
+
+rpm --import jcameron-key.asc
+
+touch /etc/yum.repos.d/webmin.repo
+
+tee /etc/yum.repos.d/webmin.repo <<EOF
+
+[Webmin]
+name=Webmin Distribution Neutral
+#baseurl=http://download.webmin.com/download/yum
+mirrorlist=http://download.webmin.com/download/yum/mirrorlist
+enabled=1
+EOF
+
+yum -y update 
+yum -y install webmin
+
+
+service webmin start
+chkconfig webmin on
+
