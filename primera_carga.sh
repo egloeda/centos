@@ -5,6 +5,7 @@ yum -y update
 yum -y install epel-release
 yum -y install net-tools
 yum -y install wget tmux nano
+yum -y install ntpdate sntp
 
 cd /root
 wget http://www.webmin.com/jcameron-key.asc
