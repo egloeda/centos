@@ -29,3 +29,5 @@ yum -y install webmin
 service webmin start
 chkconfig webmin on
 
+firewall-cmd --zone=public --permanent --add-port=10000/tcp
+firewall-cmd --reload
