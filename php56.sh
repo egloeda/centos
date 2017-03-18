@@ -7,3 +7,5 @@ yum-config-manager --enable remi-php56
 yum -y install php56 php56-php php56-php-devel
 yum -y install httpd httpd-tools
 
+firewall-cmd --zone=public --permanent --add-port=80/tcp
+firewall-cmd --reload
