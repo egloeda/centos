@@ -16,3 +16,8 @@ chkconfig httpd on
 
 firewall-cmd --zone=public --permanent --add-port=80/tcp
 firewall-cmd --reload
+
+# Para instalar OCI en PHP
+#yum install systemtap-sdt-devel
+#export PHP_DTRACE=yes
+#echo "instantclient,/usr/lib/oracle/12.2/client64/lib/"|pecl install oci8-2.0.10
