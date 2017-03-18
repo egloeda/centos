@@ -8,7 +8,7 @@ sleep 3
 yum-config-manager --enable remi-php56
 sleep 3
 yum -y install httpd httpd-tools httpd-devel
-yum -y install php56 php56-php php56-php-devel php-pear php-devel
+yum -y install php56 php56-php php56-php-devel php-pear php-devel systemtap-sdt-devel
 yum -y groupinstall "Development Tools"
 
 service httpd start
