@@ -7,6 +7,7 @@ yum -y install net-tools
 yum -y install wget tmux nano
 yum -y install ntpdate sntp
 yum -y install yum-utils
+yum -y install firewalld
 
 cd /root
 wget http://www.webmin.com/jcameron-key.asc
