@@ -33,5 +33,9 @@ yum -y install perl-IO-Compress.noarch
 service webmin start
 chkconfig webmin on
 
+service firewalld start
+chkconfig firewalld on
+
+
 firewall-cmd --zone=public --permanent --add-port=10000/tcp
 firewall-cmd --reload
