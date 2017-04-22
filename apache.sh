@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/egloeda/centos/master/apache.sh)"
 
 yum -y install httpd httpd-tools httpd-devel
