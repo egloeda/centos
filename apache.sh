@@ -54,3 +54,10 @@ chkconfig httpd on
 firewall-cmd --zone=public --permanent --add-port=80/tcp
 firewall-cmd --zone=public --permanent --add-port=443/tcp
 firewall-cmd --reload
+
+
+#AuthType Basic
+#AuthName "Restricted Area"
+#AuthBasicProvider external
+#AuthExternal pwauth
+#Require unix-group <grupo>
