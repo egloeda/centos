@@ -17,10 +17,10 @@ tar xvzf pwauth-2.3.11.tar.gz
 cd /software/pwauth-2.3.11
 cp unixgroup /usr/sbin/unixgroup
 
-#tar xvzf mod_authz_unixgroup-1.1.0.tar.gz
-#cd mod_authz_unixgroup-1.1.0.tar.gz
-#apxs -c mod_authz_unixgroup.c
-#apxs -i -a mod_authz_unixgroup.la
+tar xvzf mod_authz_unixgroup-1.1.0.tar.gz
+cd mod_authz_unixgroup-1.1.0
+apxs -c mod_authz_unixgroup.c
+apxs -i -a mod_authz_unixgroup.la
 
 #touch 00-pam-grupos.conf
 #tee 00-pam-grupos.conf <<EOF
