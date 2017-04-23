@@ -3,8 +3,7 @@
 
 yum -y install httpd httpd-tools httpd-devel
 yum -y groupinstall "Development Tools"
-yum -y mod_authnz_external pwauth
-
+yum -y install mod_authnz_external pwauth
 
 mkdir /software
 cd /software
