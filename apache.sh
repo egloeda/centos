@@ -22,19 +22,20 @@ cd mod_authz_unixgroup-1.1.0
 apxs -c mod_authz_unixgroup.c
 apxs -i -a mod_authz_unixgroup.la
 
-#touch 00-pam-grupos.conf
-#tee 00-pam-grupos.conf <<EOF
-#LoadModule authnz_external_module modules/mod_authnz_external.so
-#LoadModule authz_unixgroup_module modules/mod_authz_unixgroup.so
+cd /etc/httpd/conf.modules.d
 
-#<IfModule mod_authnz_external.c>
-#   AddExternalAuth pwauth /usr/bin/pwauth
-#   SetExternalAuthMethod pwauth pipe
-#   AddExternalGroup unixgroup /usr/sbin/unixgroup
-#   SetExternalGroupMethod unixgroup environment
-#</IfModule>
+touch 00-pam-grupos.conf
+tee 00-pam-grupos.conf <<EOF
+LoadModule authnz_external_module modules/mod_authnz_external.so
+LoadModule authz_unixgroup_module modules/mod_authz_unixgroup.so
 
-#EOF
+<IfModule mod_authnz_external.c>
+   AddExternalAuth pwauth /usr/bin/pwauth
+   SetExternalAuthMethod pwauth pipe
+   AddExternalGroup unixgroup /usr/sbin/unixgroup
+   SetExternalGroupMethod unixgroup environment
+</IfModule>
+EOF
 
 #rm /etc/httpd/conf.d/authnz_external.conf
 
