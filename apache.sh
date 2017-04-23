@@ -37,7 +37,7 @@ LoadModule authz_unixgroup_module modules/mod_authz_unixgroup.so
 </IfModule>
 EOF
 
-#rm /etc/httpd/conf.d/authnz_external.conf
+rm /etc/httpd/conf.d/authnz_external.conf
 
 apachectl configtest
 
